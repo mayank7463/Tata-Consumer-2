@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="chartMenu">
+            <div class="buttons">
+                <button id="sale" class="active" onclick="updateChart('sale')">Sales</button>
+                <button id="profit" onclick="updateChart('profit')">Profit from operations</button>
+                <button id="patax" onclick="updateChart('patax')">Profit after tax</button>
+                <button id="eps" onclick="updateChart('eps')">Eps</button>
+                <button id="dpshare" onclick="updateChart('dpshare')">Dividend per Share</button>
+                <button id="capex" onclick="updateChart('capex')">Capex</button>
+            </div>
+            <div class="downloadMenu">
+                <button class="downloadButton">Download</button>
+                <div class="dropdownContent">
+                    <button onclick="downloadImage('jpeg')">JPEG</button>
+                    <button onclick="downloadImage('png')">PNG</button>
+                </div>
+            </div>
+        </div>
+        <div class="chartCard">
+            <div class="chartBox">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="index.js"></script>
+</body>
+</html>
